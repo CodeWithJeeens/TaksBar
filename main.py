@@ -15,7 +15,7 @@ Guthaben = rows[1].text.split()
 Bonuspunkte = rows[2].text.split()
 
 #save in json file
-with open('docs/result.json', 'w') as f:
+with open('D:/xmap/htdocs/result.json', 'w') as f:
   json.dump(Name, f)
   json.dump(Guthaben, f)
   json.dump(Bonuspunkte, f)
