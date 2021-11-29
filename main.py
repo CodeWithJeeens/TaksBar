@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import codecs
 
 #Get Elements
 url = f'https://qr.taketv.net/card/takepzsnetsufi'
@@ -9,18 +10,30 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 table = soup.find('table', attrs={'class': 'table table-striped'})
 rows = table.find_all('tr')
+strong = table.find_all('strong')
 
-Name = rows[0].text.split()
-Guthaben = rows[1].text.split()
-Bonuspunkte = rows[2].text.split()
+Name = table.text.split()
+Guthaben = table.text.split()
+Bonuspunkte = table.text.split()
 
-#save in json file
-with open('D:/xmap/htdocs/result.json', 'w') as f:
-  json.dump(Name, f)
-  json.dump(Guthaben, f)
-  json.dump(Bonuspunkte, f)
+JName = Name[0]
+JGuthaben = Guthaben[1]
+JBonuspunkte = Bonuspunkte[2]
+
+data = {}
+data['TakeBar'] = []
+data['TakeBar'].append({
+    'Name': JName,
+    'Guthaben': JGuthaben,
+    'Bonuspunkte': JBonuspunkte
+})
+
+with open('docs/result.json', 'wb', ) as f:
+    json.dump(data, codecs.getwriter('utf-8')(f), ensure_ascii=False)
 
 #Print Elements in Consol
-print(Name)
-print(Guthaben)
-print(Bonuspunkte)
+print(Name[0])
+print(Guthaben[1])
+print(Bonuspunkte[2])
+
+
