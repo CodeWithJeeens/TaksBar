@@ -1,0 +1,15 @@
+data = {}
+data['TakeBar'] = []
+data['TakeBar'].append({
+    'name': JName
+})
+
+data['TakeBar'].append({
+    'guthaben': JGuthaben
+})
+data['TakeBar'].append({
+    'bonuspunkte': JBonuspunkte
+})
+
+with open('docs/result.json', 'wb', ) as f:
+    json.dump(data, codecs.getwriter('utf-8')(f), ensure_ascii=False)

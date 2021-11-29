@@ -21,15 +21,16 @@ JGuthaben = Guthaben[1]
 JBonuspunkte = Bonuspunkte[2]
 
 data = {}
-data['TakeBar'] = []
-data['TakeBar'].append({
+data['takebar'] = []
+
+data['takebar'].append({
     'name': JName
 })
 
-data['TakeBar'].append({
+data['takebar'].append({
     'guthaben': JGuthaben
 })
-data['TakeBar'].append({
+data['takebar'].append({
     'bonuspunkte': JBonuspunkte
 })
 
