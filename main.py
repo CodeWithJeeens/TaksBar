@@ -23,14 +23,14 @@ JBonuspunkte = Bonuspunkte[2]
 data = {}
 data['TakeBar'] = []
 data['TakeBar'].append({
-    'Name': JName
+    'name': JName
 })
 
 data['TakeBar'].append({
-    'Guthaben': JGuthaben
+    'guthaben': JGuthaben
 })
 data['TakeBar'].append({
-    'Bonuspunkte': JBonuspunkte
+    'bonuspunkte': JBonuspunkte
 })
 
 with open('docs/result.json', 'wb', ) as f:
