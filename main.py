@@ -23,8 +23,13 @@ JBonuspunkte = Bonuspunkte[2]
 data = {}
 data['TakeBar'] = []
 data['TakeBar'].append({
-    'Name': JName,
-    'Guthaben': JGuthaben,
+    'Name': JName
+})
+
+data['TakeBar'].append({
+    'Guthaben': JGuthaben
+})
+data['TakeBar'].append({
     'Bonuspunkte': JBonuspunkte
 })
 
