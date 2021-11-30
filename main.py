@@ -20,20 +20,9 @@ JName = Name[0]
 JGuthaben = Guthaben[1]
 JBonuspunkte = Bonuspunkte[2]
 
-data = {}
-data['takebar'] = []
 
-data['takebar'].append({
-    'name': JName
-})
-
-data['takebar'].append({
-    'guthaben': JGuthaben
-})
-data['takebar'].append({
-    'bonuspunkte': JBonuspunkte
-})
-
+# Create Json File in -> docs/result.json
+data = {"name" : JName, "guthaben" : JGuthaben, "bonuspunkte" : JBonuspunkte}
 with open('docs/result.json', 'wb', ) as f:
     json.dump(data, codecs.getwriter('utf-8')(f), ensure_ascii=False)
 

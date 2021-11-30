@@ -1,13 +1,14 @@
 data = {}
-data['TakeBar'] = []
-data['TakeBar'].append({
+data['user'] = []
+
+data['user'].append({
     'name': JName
 })
 
-data['TakeBar'].append({
+data['user'].append({
     'guthaben': JGuthaben
 })
-data['TakeBar'].append({
+data['user'].append({
     'bonuspunkte': JBonuspunkte
 })
 
