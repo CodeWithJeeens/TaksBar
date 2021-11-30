@@ -23,7 +23,7 @@ JBonuspunkte = Bonuspunkte[2]
 
 # Create Json File in -> docs/result.json
 data = {"name" : JName, "guthaben" : JGuthaben, "bonuspunkte" : JBonuspunkte}
-with open('docs/result.json', 'wb', ) as f:
+with open('D:\Web\htdocs\docs/result.json', 'wb', ) as f:
     json.dump(data, codecs.getwriter('utf-8')(f), ensure_ascii=False)
 
 #Print Elements in Consol
